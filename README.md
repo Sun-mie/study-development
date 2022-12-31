@@ -1,4 +1,4 @@
-# /study-frontend
+# study-frontend
 
 💡 Front-end에 관한 공부 내용을 담고 있는 repository
 
@@ -13,3 +13,4 @@
 
 > `udemy-vue-the-complete-guide`
 <br>  Udemy의 Vue - 완벽 가이드를 기반으로 강의를 보며 공부한 내용
+<br>  🖇️ [Notion study vue.js](https://separate-chimpanzee-eab.notion.site/vue-js-976572170dee441f985644cf720b5536) - 공부 내용을 정리한 notion page
