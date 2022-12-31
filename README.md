@@ -1,4 +1,4 @@
-# study-frontend
+# /study-frontend
 
 💡 Front-end에 관한 공부 내용을 담고 있는 repository
 
