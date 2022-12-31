@@ -1,6 +1,11 @@
 # vue #
-💡 Vue.js에 관한 공부 내용을 담고 있는 repository
-<br>    현 repositroy 는 노션 [study vue.js](https://separate-chimpanzee-eab.notion.site/vue-js-976572170dee441f985644cf720b5536) 페이지에 공부 내용을 추가 정리하고있습니다.
+
+  💡 Vue.js에 관한 공부 내용을 담고 있는 repository
+  현 repositroy 는 노션에 추가 정리를 하고있습니다.
+
+## 참고 링크 ##
+
+- [Notion study vue.js](https://separate-chimpanzee-eab.notion.site/vue-js-976572170dee441f985644cf720b5536)
 
 # 폴더 설명 #
 
