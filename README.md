@@ -1,8 +1,9 @@
-# study-frontend
+# study-frontend # 
+🔗[Notion Front-end page](https://www.notion.so/study-development-63840dff74da48778fe796266b015e25#c0f696145a0947e88b92dd60b4ca3d84)
 
 💡 Front-end에 관한 공부 내용을 담고 있는 repository
 
-🔗[Notion Front-end page](https://www.notion.so/study-development-63840dff74da48778fe796266b015e25#c0f696145a0947e88b92dd60b4ca3d84)
+
 
 # 폴더 설명
 
