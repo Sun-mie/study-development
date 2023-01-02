@@ -21,14 +21,17 @@
       <input type="text" v-model="enterdValue"/>
       <button @click="addGoals">Add Goal</button>
       <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
-      <ul v-else>
+      <!-- <ul v-else>
         <li v-for="goal in goals">{{ goal }}</li>
       </ul>
-      <!-- 
-        index값 출력
-      <ul>
-        <li v-for="(goal,idx) in goals">{{ goal }} {{ idx }}</li>
+        index값 출력 -->
+      <ul v-else>
+        <li v-for="(goal,idx) in goals" @click="removeGoal(idx)" :key="goal">
+          <p>{{ goal }}</p>
+          <input type="text" @click.stop>
+        </li>
       </ul>
+      <!--
         객체 루프, key값, idx 출력
       <ul>
         <li v-for="(value, key, idx) in {name:'sunmi', age:'31'}">{{ key }}: {{ value }} ({{ idx }})</li>
