@@ -18,12 +18,25 @@
     </header>
     <section id="user-goals">
       <h2>My course goals</h2>
-      <input type="text" />
-      <button>Add Goal</button>
-      <p>No goals have been added yet - please start adding some!</p>
-      <ul>
-        <li>Goal</li>
+      <input type="text" v-model="enterdValue"/>
+      <button @click="addGoals">Add Goal</button>
+      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+      <ul v-else>
+        <li v-for="goal in goals">{{ goal }}</li>
       </ul>
+      <!-- 
+        index값 출력
+      <ul>
+        <li v-for="(goal,idx) in goals">{{ goal }} {{ idx }}</li>
+      </ul>
+        객체 루프, key값, idx 출력
+      <ul>
+        <li v-for="(value, key, idx) in {name:'sunmi', age:'31'}">{{ key }}: {{ value }} ({{ idx }})</li>
+      </ul>
+        숫자 루프
+      <ul>
+        <li v-for="num in 10">{{ num }}</li>
+      </ul> -->
     </section>
   </body>
 </html>
