@@ -1,33 +1,29 @@
 const app = Vue.createApp({
     data(){
         return {
-            textlist: [],
+            textList: [],
             enterdText:'',
-            show : false,
+            show: true
         }
     },
     methods: {
         clickAdd(){
-            textlist.push(enterdText);
-        },
-        outputcheck(){
-            if(this.textlist.length === 0){
-                return this.show;
-            }else{
-                this.show = !this.show;
-                return this.show;
-            }
+            this.textList.push(this.enterdText);
+            this.enterdText = '';
         },
         changeBtn(){
             this.show = !this.show;
+        },
+        removeText(idx){
+            this.textList.splice(idx, 1);
         }
     },
     computed: {
-        showText() {
-            if(this.show === false){
+        showText(){
+            if(this.show === true){
                 return 'Hide';
             }else{
-                return 'ShowList';
+                return 'Show List';
             }
         }
     }
