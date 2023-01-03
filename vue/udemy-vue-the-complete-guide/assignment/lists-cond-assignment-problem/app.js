@@ -20,11 +20,7 @@ const app = Vue.createApp({
     },
     computed: {
         showText(){
-            if(this.show === true){
-                return 'Hide';
-            }else{
-                return 'Show List';
-            }
+            return this.show ? 'Hide' : 'Show List';
         }
     }
 });
