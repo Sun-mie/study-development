@@ -19,7 +19,7 @@
     <div id="game">
       <section class="container">
         <h2>Timer : 
-          <span :style="{'color': remaningTime <= 10 ? 'red' : 'black'}">{{ remaningTime }}</span>sec</h2>
+          <span :style="{'color': timer <= 10 ? 'red' : 'black'}">{{ timer }}</span>sec</h2>
       </section>
       <section id="monster" class="container">
         <h2>🐉Monster Health</h2>
@@ -33,13 +33,8 @@
           <div class="healthbar__value">{{ userHP }} / <span v-once>{{ userHP }}</span></div>
         </div>
       </section>
-      <section id="controls" v-if="controlView">
-        <button @click="attackMonster">ATTACK</button>
-        <button>SPECIAL ATTACK</button>
-        <button>HEAL</button>
-        <button>SURRENDER</button>
-      </section>
-      <section class="container" v-else-if="!controlView & result === null">
+
+      <section class="container" v-if="!showControler & result === null">
         <h2>Game description</h2>
         <p>You have only a minute.
           <br> 🐉 Attack monster in time
@@ -48,9 +43,17 @@
         </p>
         <button @click="gameBtn">Game start !</button>
       </section>
-      <section class="container" v-else-if="remaningTime === 0">
-        <h2 v-if="result === 'timeover'">Time over<br> You lost..</h2>
-        <button @click="gameBtn">Start Again</button>
+      <section id="controls" v-else-if="showControler & result === null">
+        <button @click="attackMonster">ATTACK</button>
+        <button>SPECIAL ATTACK</button>
+        <button>HEAL</button>
+        <button>SURRENDER</button>
+      </section>
+      <section class="container" v-if="!showControler & result !== null">
+        <p v-if="!showControler & result === 'timeover'"><h2>Timeover</h2>You lose..</p>
+        <p v-else-if="!showControler & result === 'win'"><h2>V I C T O R Y</h2>🏆 You win !! 🏆<br>I've knew you're good at it!</p>
+        <p v-else-if="!showControler & result === 'lose'"><h2>You lose..</h2>But i think you can get a win to try it again,<br> How about you try it again?</p>
+        <button @click="gameStart">Start Again</button>
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
