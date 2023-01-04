@@ -17,23 +17,40 @@
       <h1>Monster Slayer</h1>
     </header>
     <div id="game">
+      <section class="container">
+        <h2>Timer : 
+          <span :style="{'color': remaningTime <= 10 ? 'red' : 'black'}">{{ remaningTime }}</span>sec</h2>
+      </section>
       <section id="monster" class="container">
-        <h2>Monster Health</h2>
+        <h2>🐉Monster Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value"></div>
+          <div class="healthbar__value">{{ monsterHP }} / <span v-once>{{ monsterHP }}</span></div>
         </div>
       </section>
       <section id="player" class="container">
-        <h2>Your Health</h2>
+        <h2>🦸🏻Your Health</h2>
         <div class="healthbar">
-          <div class="healthbar__value"></div>
+          <div class="healthbar__value">{{ userHP }} / <span v-once>{{ userHP }}</span></div>
         </div>
       </section>
-      <section id="controls">
-        <button>ATTACK</button>
+      <section id="controls" v-if="controlView">
+        <button @click="attackMonster">ATTACK</button>
         <button>SPECIAL ATTACK</button>
         <button>HEAL</button>
         <button>SURRENDER</button>
+      </section>
+      <section class="container" v-else-if="!controlView & result === null">
+        <h2>Game description</h2>
+        <p>You have only a minute.
+          <br> 🐉 Attack monster in time
+          <br> and get the win🏆!
+          <br> then, let's go to get a win!
+        </p>
+        <button @click="gameBtn">Game start !</button>
+      </section>
+      <section class="container" v-else-if="remaningTime === 0">
+        <h2 v-if="result === 'timeover'">Time over<br> You lost..</h2>
+        <button @click="gameBtn">Start Again</button>
       </section>
       <section id="log" class="container">
         <h2>Battle Log</h2>
