@@ -13,9 +13,10 @@
 📁 **vue** ([Notion vue.js](https://pacific-flier-fbd.notion.site/vue-js-9d35b717e14b48629d1fbd34c24148d9))
 
 > udemy-vue-the-complete-guide
-<br> `Udemy의 Vue - Udemy강의 Vue - 완벽 가이드 (Router 및 Composition API 포함)를 베이스로 둔 폴더`
+<br> `Udemy의 Vue - 완벽 가이드 (Router 및 Composition API 포함)를 베이스로 둔 공부내용`
 
 # reference
 
 💼 mini-monster-slayer [[바로가기]](https://github.com/Sun-mie/mini-monster-slayer)
+<br>   Udemy Vue 기존 과제를 변형해서 시간 기능을 이용해 재해석한 미니 게임 프로젝트
 
