@@ -1,7 +1,7 @@
 # study-frontend # 
 
 💡 Front-end에 관한 공부 내용을 담고 있는 repository
-<br>📘 현 repository의 공부 내용을 Notion에 정리하고 있습니다. → [Notion study-development](https://www.notion.so/study-development-63840dff74da48778fe796266b015e25#c0f696145a0947e88b92dd60b4ca3d84)
+<br>📗 현 repository의 공부 내용은 Notion에 정리되어있습니다. [(Notion study-development)](https://www.notion.so/study-development-63840dff74da48778fe796266b015e25#c0f696145a0947e88b92dd60b4ca3d84)
 
 # description
 
