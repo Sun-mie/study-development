@@ -14,7 +14,7 @@
       name="Julie Jones"
       phone-number="0987 654421 21"
       email-address="julie@localhost.com"
-      is-favorite="1"
+      is-favorite="0"
       ></friend-contact>
     </ul>
   </section>
@@ -22,24 +22,24 @@
 
 <script>
 export default {
-  data() {
-    return {
-      friends: [
-        {
-          id: "manuel",
-          name: "Manuel Lorenz",
-          phone: "0123 45678 90",
-          email: "manuel@localhost.com",
-        },
-        {
-          id: "julie",
-          name: "Julie Jones",
-          phone: "0987 654421 21",
-          email: "julie@localhost.com",
-        },
-      ],
-    };
-  },
+  // data() {
+  //   return {
+  //     friends: [
+  //       {
+  //         id: "manuel",
+  //         name: "Manuel Lorenz",
+  //         phone: "0123 45678 90",
+  //         email: "manuel@localhost.com",
+  //       },
+  //       {
+  //         id: "julie",
+  //         name: "Julie Jones",
+  //         phone: "0987 654421 21",
+  //         email: "julie@localhost.com",
+  //       },
+  //     ],
+  //   };
+  // },
 };
 </script>
 
