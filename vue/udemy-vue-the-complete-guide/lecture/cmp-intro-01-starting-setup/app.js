@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 const app = Vue.createApp({
 data(){
     return{
@@ -58,3 +59,19 @@ app.component('friend-contact',{
 });
 
 app.mount('#app');
+=======
+const app = Vue.creat({
+    data(){
+        return{
+            monitorBigright: 2
+        }
+    },
+    methods: {
+        brightUp(){
+            while (this.monitorBigright < 8){
+                this.monitorBigright += 1;
+            }
+        }
+    }
+});
+>>>>>>> Stashed changes
