@@ -10,4 +10,5 @@ var score;
 // score = 10;
 console.log(score);
 
-// 위의 경우 var를 먼저 읽고 log 출력을해서 처음에 undefined가 떳다가 score=80ㅇ로 값을 주어서 80이 뜸
+// 위의 경우 var를 먼저 읽고 log 출력을해서 처음에 undefined가 떳다가 score=80로 값을 주어서 80이 뜸
+
