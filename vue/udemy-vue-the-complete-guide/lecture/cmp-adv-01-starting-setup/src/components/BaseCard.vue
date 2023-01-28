@@ -1,7 +1,9 @@
 <template>
   <div>
     <header>
-      <slot name="header"></slot>
+      <slot name="header">
+        <h2>Default header</h2>
+      </slot>
     </header>
     <slot></slot>
   </div>
@@ -9,6 +11,9 @@
 
 <script>
 export default {
+  mounted(){
+    console.log(this.$slots)
+  }
 }
 </script>
 
