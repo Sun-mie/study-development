@@ -1,8 +1,13 @@
 <template>
   <div>
     <TheHeader/> <!--파스칼표기법은 셀프클로징태그가 가능-->
-    <manage-goals></manage-goals>
-    <active-goals></active-goals>
+    <button @click="setSelectedComponent('manage-goals')">ManageGoals</button>
+    <button @click="setSelectedComponent('active-goals')">ActiveGoals</button>
+    <keep-alive>
+    <component :is="selectedComponenet"></component>
+    </keep-alive>
+<!--    <manage-goals v-if="selectedComponenet === 'manage-goals'"></manage-goals>-->
+<!--    <active-goals v-if="selectedComponenet === 'active-goals'"></active-goals>-->
 <!--    <badge-list></badge-list>-->
 <!--    <user-info-->
 <!--      :full-name="activeUser.name"-->
@@ -21,7 +26,7 @@
 
 <script>
 
-import TheHeader from './components/TheHeader.vue';
+import TheHeader from './components/layout/TheHeader.vue';
 import ManageGoals from './components/ManageGoals.vue';
 import ActiveGoals from'./components/ActiveGoals.vue';
 // import UserInfo from './components/UserInfo.vue';
@@ -39,6 +44,7 @@ export default {
   },
   data() {
     return {
+      selectedComponenet:'active-goals', //HTML 태그이름
       activeUser: {
         name: 'Maximilian Schwarzmüller',
         description: 'Site owner and admin',
@@ -46,6 +52,11 @@ export default {
       },
     };
   },
+  methods:{
+    setSelectedComponent(cmp){
+      this.selectedComponenet = cmp;
+    }
+  }
 };
 </script>
 
