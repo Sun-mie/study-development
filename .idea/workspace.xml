@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75449eb8-b1b0-4a96-b01d-6cddb8464b2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/BaseCards.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/TheHeader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/learning-resources/LearningResource.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/learning-resources/StoredResources.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/basics-05-using-the-native-event-object/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/basics-05-using-the-native-event-object/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/basics-05-using-the-native-event-object/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/UI/TheHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/layouts/TheHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/learning-resources/LearningResource.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/learning-resources/LearningResource.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +49,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/layouts" />
+      <recent name="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/UI" />
       <recent name="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/prj-cmp-01-starting-setup/src/components/learning-resources" />
       <recent name="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/cmp-adv-01-starting-setup/src/components/UI" />
       <recent name="$PROJECT_DIR$/vue/udemy-vue-the-complete-guide/lecture/cmp-adv-01-starting-setup/src/components/layout" />
@@ -91,7 +89,7 @@
       <workItem from="1674898003210" duration="203000" />
       <workItem from="1674978161204" duration="4554000" />
       <workItem from="1675084268438" duration="448000" />
-      <workItem from="1675084828674" duration="3176000" />
+      <workItem from="1675084828674" duration="4844000" />
     </task>
     <servers />
   </component>
