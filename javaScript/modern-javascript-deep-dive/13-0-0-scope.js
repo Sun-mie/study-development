@@ -92,3 +92,4 @@ function outer(){
 outer();
 console.log(x); // global x
 // console.log(z); //ReferenceError: z is not defined
+
