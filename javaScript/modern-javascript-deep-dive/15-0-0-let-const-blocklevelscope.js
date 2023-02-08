@@ -70,17 +70,116 @@
 // console.log(foo); // 1
 // console.log(bar); // ReferenceError: bar is not defined
 
-let i = 10; // 전역 변수
-function foo(){
-    let i = 100;
+// let i = 10; // 전역 변수
+// function foo(){
+//     let i = 100;
 
-    for (let i = 1; i < 3; i++){
-        console.log(i); // 1 2 
-    }
+//     for (let i = 1; i < 3; i++){
+//         console.log(i); // 1 2 
+//     }
 
-    console.log(i); // 100
-}
+//     console.log(i); // 100
+// }
 
-foo();
-console.log(i); // 10
+// foo();
+// console.log(i); // 10
 
+//------------------ 변수 호이스팅 -----------------------//
+// console.log(foo); //ReferenceError: Cannot access 'foo' before initialization
+// let foo; 
+
+// 런타임 이전에 선언 단계가 실행된다. 아직 변수가 초기화되지 않았다.
+// 초기화 이전의 일시적 사각지대에서는 변수를 참조할 수 없다.
+// console.log(foo); //ReferenceError: Cannot access 'foo' before initialization
+
+// let foo;
+// console.log(foo); //undefined
+
+// foo =1;
+// console.log(foo); //1
+
+// let foo = 1;
+// {
+//     console.log(foo); //ReferenceError: Cannot access 'foo' before initialization
+//     let foo = 2;
+// }
+
+// //전역 변수
+// var x = 1;
+// //암묵적 전역
+// y = 2;
+// //전역 함수
+// function foo(){}
+
+// // [브라우서 환경에서 실행해야함]
+// // var 키워드로 선언한 전역 변수는 전역 객체 window의 프로퍼티다.
+// console.log(window.x); //1
+// // 전역 객체 window의 프로퍼티는 전역 변수처럼 사용할 수 있다.
+// console.log(x);
+
+// // 암묵적 전역은 전역 객체 window의 프로퍼티다.
+// console.log(window.y);
+// console.log(y);
+
+// // 함수 선언문으로 정의한 전역 함수는 전역 객체 window의 프로퍼티다.
+// console.log(window.foo);
+// // 전역 객체 window의 프로퍼티는 전역 변수처럼 사용할 수 있다.
+// console.log(foo);
+
+// // [브라우서 환경에서 실행해야함]
+// let x = 1;
+
+// // let const 키워드로 선언한 전역 변수는 전역 객체 window의 프로퍼티가 아니다.
+// console.log(window.x); //undefined
+// console.log(x); //1
+
+//const foo = 1;
+
+//const foo; //SyntaxError: Missing initializer in const declaration
+
+// {
+//     //변수 호이스팅이 발생하지 않는 것처럼 동작한다.
+//     //console.log(foo); //ReferenceError: Cannot access 'foo' before initialization
+//     const foo = 1;
+//     console.log(foo); //1
+// }
+
+// //블록 레벨 스코프를 가진다
+// console.log(foo); //ReferenceError: foo is not defined
+
+// const foo = 1;
+// foo =2;
+
+/*
+    0.1은 어떤 의미로 사용했는지 명확히 알기 어렵고
+    세율을 의미하는 0.1은 쉽게 바뀌지 않는 값이다.
+    이때 세율을 상수로 정의하면 값의 의미를 쉽게 파악할 수 있고 변경될 수 없는 고정값으로 사용할 수 있다.
+*/
+// // 공급가액
+// let preTaxPrice = 100;
+
+// // 공급대가
+// // 0.1의 의미를 명확히 알기 어렵기 때문에 가독성이 좋지 않다.
+// let afterTaxPrice = preTaxPrice + (preTaxPrice * 0.1);
+
+// console.log(afterTaxPrice); //110
+
+//--------------------------------------------------------
+
+// const TAX_RATE = 0.1;
+
+// // 세전 가격
+// let preTaxPrice = 100;
+
+// // 세후 가격
+// let afterTaxPrice = preTaxPrice + (preTaxPrice * TAX_RATE);
+
+// console.log(afterTaxPrice); //110
+
+const person = {
+    name : 'jo'
+};
+
+// 객체는 변경 가능한 값이다. 다라서 재할당 없이 변경이 가능하다.
+person.name = 'sunmie';
+console.log(person); //{ name: 'sunmie' }
