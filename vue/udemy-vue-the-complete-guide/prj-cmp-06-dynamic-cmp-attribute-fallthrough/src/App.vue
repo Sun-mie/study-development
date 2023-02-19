@@ -1,23 +1,20 @@
 <template>
   <the-header title="RememberMe"></the-header>
-    <the-resources></the-resources>
+  <the-resources></the-resources>
 </template>
 
 <script>
 import TheHeader from './components/layouts/TheHeader.vue';
-//import StoredResources from './components/learning-resources/StoredResources.vue';
 import TheResources from './components/learning-resources/TheResources.vue';
 
 export default {
-  components:{
-    //StoredResources, //'stored-resources': StoredResources
+  components: {
     TheHeader,
     TheResources
   }
-  }
+};
 </script>
 
-/* App.vue 에서 모든 스타일이 전역으로 등록됨*/
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
