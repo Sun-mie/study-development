@@ -177,7 +177,7 @@
 // console.log(afterTaxPrice); //110
 
 const person = {
-    name : 'jo'
+    name: 'jo'
 };
 
 // 객체는 변경 가능한 값이다. 다라서 재할당 없이 변경이 가능하다.
