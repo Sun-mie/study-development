@@ -58,11 +58,11 @@ function App() {
       <Wrapper>
         <Hello name="react" color="red" isSpecial={true} /> {/* 자바스크립트 값은 중괄호로 감싸준다 */}
         <Hello color="pink" />
-        <Hello isSpecial /> {/* props만있고 값이 없으면 true */}
-        <div style={style}>{name}</div>
+        <Hello isSpecial/> {/* props만있고 값이 없으면 true */}
+        <div style={style} name={name}></div>
         <div className="gray-box"></div>
       </Wrapper>
-      <Counter />
+      <Counter/>
       <InputSample />
       <UserList users={users}/>
     </>
