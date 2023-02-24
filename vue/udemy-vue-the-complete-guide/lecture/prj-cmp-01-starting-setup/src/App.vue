@@ -5,12 +5,10 @@
 
 <script>
 import TheHeader from './components/layouts/TheHeader.vue';
-//import StoredResources from './components/learning-resources/StoredResources.vue';
 import TheResources from './components/learning-resources/TheResources.vue';
 
 export default {
   components:{
-    //StoredResources, //'stored-resources': StoredResources
     TheHeader,
     TheResources
   }
