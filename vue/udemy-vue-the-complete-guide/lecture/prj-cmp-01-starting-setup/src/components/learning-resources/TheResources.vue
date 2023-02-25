@@ -7,7 +7,9 @@
                      :mode="addResButtonMode">Add Resource</base-button>
     </base-card>
     <!-- :is로 어떤 컴포넌트를 불러올지 알리는 것 -->
+    <keep-alive>
     <component :is="selectedTab"></component>
+    </keep-alive>
 </template>
 
 <script>
@@ -15,14 +17,14 @@ import StoredResources from './StoredResources.vue';
 import AddResource from './AddResource.vue';
 
 export default {
-    componsnts: {
+    components: {
         StoredResources,
         AddResource
     },
     data() {
         return {
             selectedTab: 'stored-resources',
-            Resources: [
+            resources: [
                 {
                     id: 'official-guide',
                     title: 'Official Guide',
@@ -40,12 +42,28 @@ export default {
     },
     provide(){ //자식컴포넌트들이 접근할 수 있게 됨.
         return {
-            resources: this.Resources
+            resources: this.resources,
+            addResources: this.addResources,
+            deleteResource: this.deleteResource
         };
     },
     methods: {
         setSelectedTab(tab) {
             this.selectedTab = tab;
+        },
+        addResources(title, des, url){
+            const newResources = {
+                id: new Date().toISOString(),
+                title: title,
+                description: des,
+                link: url
+            };
+            this.resources.unshift(newResources);
+            this.selectedTab = 'stored-resources'
+        },
+        deleteResource(resId){
+            const resIndex = this.resources.findIndex(res => res.id === resId);
+            this.resources.splice(resIndex, 1);
         }
     },
     computed: {

@@ -1,17 +1,26 @@
 <template>
+  <base-dialog v-if="inputIsInvalid" title="Invalid Input" @close="confirmError">
+    <template #default>
+      <p>Unfortunately, at least on input value is invalid.</p>
+      <p>Please check all inputs and sure you enter a few characters inro each input field.</p>
+    </template>
+    <template v-slot:actions>
+      <base-button @click="confirmError">Okay</base-button>
+    </template>
+  </base-dialog>
     <base-card>
-<form>
+<form @submit.prevent="submitData">
     <div class="form-control">
     <label for="title">Title</label> <!--for id 짝꿍 -->
-    <input id="title" name="title" type="text">
+    <input id="title" name="title" type="text" ref="titleInput">
 </div>
 <div class="form-control">
     <label for="description">Description</label> <!--for id 짝꿍 -->
-    <textarea id="description" name="description" rows="3"/>
+    <textarea id="description" name="description" rows="3" ref="descriptionInput"/>
 </div>
 <div class="form-control">
     <label for="link">Link</label> <!--for id 짝꿍 -->
-    <input id="link" name="link" type="url">
+    <input id="link" name="link" type="url" ref="linkInput">
 </div>
 <div>
     <base-button type="submit">Add Resource</base-button>
@@ -19,6 +28,34 @@
 </form>
 </base-card>
 </template>
+
+<script>
+export default {
+  inject: ['addResources'],
+  data(){
+    return {
+      inputIsInvalid: false,
+    };
+  },
+  methods: {
+    submitData(){
+      const enteredTitle = this.$refs.titleInput.value;
+      const enteredDes = this.$refs.descriptionInput.value;
+      const enteredLink = this.$refs.linkInput.value;
+
+      if(enteredTitle.trim() === '' || enteredDes.trim() === '' || enteredLink.trim() === ''){
+        this.inputIsInvalid = true;
+        return;
+      } 
+      this.addResources(enteredTitle, enteredDes, enteredLink);
+    },
+    confirmError(){
+      this.inputIsInvalid = false;
+    }
+  },
+
+}
+</script>
 
 <style scoped>
 label {
