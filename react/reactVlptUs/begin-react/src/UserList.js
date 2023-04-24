@@ -3,7 +3,7 @@ function User({ user }) {
     return(
         <div>
             <b>{user.username}</b>
-            <span>({user.useYn})</span>
+            <span>({user.email})</span>
         </div>
     );
 }
